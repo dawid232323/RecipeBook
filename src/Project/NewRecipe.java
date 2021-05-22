@@ -28,13 +28,13 @@ public class NewRecipe {
 
     public static FirstDish firstDishGetter(){
         System.out.println("Podaj ile litrów zupy powstanie");
-        int amount = scan.nextInt();
+        int amount = Integer.parseInt(scan.nextLine());
         return new FirstDish(name, ingredients, category, subcategory, cost, preparing, amount);
     }
 
     public static SecondDish secondDishGetter(){
         System.out.println("Podaj liczbę porcji");
-        int portions = scan.nextInt();
+        int portions = Integer.parseInt(scan.nextLine());
         System.out.println("Podaj przeznaczenie potrawy");
         String destiny = scan.nextLine();
         return new SecondDish(name, ingredients, category, subcategory, cost, preparing, portions, destiny);
@@ -44,7 +44,7 @@ public class NewRecipe {
         System.out.println("Podaj jaki to napój");
         String type = scan.nextLine();
         System.out.println("Podaj liczbę litrów");
-        int am = scan.nextInt();
+        int am = Integer.parseInt(scan.nextLine());
         return new Drink(name, ingredients, category, subcategory, cost, preparing, am, type);
     }
 
@@ -52,7 +52,7 @@ public class NewRecipe {
         System.out.println("Podaj przeznaczenie przystawki");
         String dest = scan.nextLine();
         System.out.println("Podaj ilość poracji");
-        int am = scan.nextInt();
+        int am = Integer.parseInt(scan.nextLine());
         return new Snack(name, ingredients, category, subcategory, cost, preparing, dest, am);
     }
 
@@ -104,7 +104,7 @@ public class NewRecipe {
         System.out.println("Podaj Postępowanie");
         preparing = scan.nextLine();
         System.out.println("Podaj koszt");
-        cost = scan.nextInt();
+        cost = Integer.parseInt(scan.nextLine());
 
         switch (category){
             case "Pierwsze Danie":

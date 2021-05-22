@@ -17,8 +17,10 @@ public class MainClass {
         HashSet<String> names = reader.getNames();
         NewRecipe getter = new NewRecipe(names);
         Searcher searcher = new Searcher(firstList, secondList, drinkList, snackList, saladList, subCategories);
+        Runnable runner = new listThread(firstList, secondList, drinkList, snackList, saladList);
+        Thread thread = new Thread(runner);
         userHandler handler = new userHandler(firstList, secondList, drinkList, snackList, saladList,
-                subCategories, getter, searcher);
+                subCategories, getter, searcher, thread);
         handler.mainMenu();
 
     }

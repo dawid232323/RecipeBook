@@ -15,11 +15,12 @@ public class userHandler {
     private static NewRecipe newRecipe;
     private static Searcher searcher;
     public static fileWriter writer;
+    public static Thread thread;
 
     public userHandler(ArrayList<FirstDish> firstDishes, ArrayList<SecondDish> secondDishes, ArrayList<Drink> drinks,
                        ArrayList<Snack> snacks, ArrayList<Salad> salads,
                        HashMap<String, ArrayList<Dish>> subCategories, NewRecipe newRecipe,
-                       Searcher searcher){
+                       Searcher searcher, Thread thread){
         userHandler.firstDishes = firstDishes;
         userHandler.secondDishes = secondDishes;
         userHandler.drinks = drinks;
@@ -29,12 +30,13 @@ public class userHandler {
         userHandler.newRecipe = newRecipe;
         userHandler.searcher = searcher;
         userHandler.writer = new fileWriter(firstDishes, secondDishes, drinks, snacks, salads);
+        userHandler.thread = thread;
     }
 
     public static void printHelp(){
         System.out.println("'s' - szukanie przepisów\n" +
                 "'n' - dodaj nowy przepis\n" +
-                "k - zakończ program");
+                "'k' - zakończ program");
         System.out.println("System na bieżąco sprawdza stan ilości przepisów i na bieżąco je zapisuje do pliku");
     }
 
@@ -42,7 +44,8 @@ public class userHandler {
         System.out.println("Witaj w książce kucharskiej!");
         String oper;
         boolean val = true;
-        secondDishes.get(secondDishes.size() - 1).returnContents();
+        thread.start();
+//        secondDishes.get(secondDishes.size() - 1).returnContents();
         while (val){
             System.out.println("Do jakiej sekcji chcesz przejść? (pomoc - wyświetl dostępne instrukcje)");
             oper = scanner.nextLine();
@@ -53,7 +56,6 @@ public class userHandler {
                 case "n":
                     newRecipe.adder(firstDishes, secondDishes, drinks, salads, snacks, subCategories);
 //                    secondDishes.get(secondDishes.size()- 1).returnContents();
-
                     break;
                 case "s":
                     searcher.chooseFunction();
@@ -66,5 +68,6 @@ public class userHandler {
                     System.out.println("Zły tryb");
             }
         }
+        thread.stop();
     }
 }

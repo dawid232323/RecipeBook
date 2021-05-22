@@ -58,4 +58,4 @@
     <Amount>4</Amount>
     <Destiny/>
 </Dish>
-<Dish><Category>Napój</Category><Subcategory>Fit</Subcategory><Name>Koktajl</Name><Ingredients type="array"><value>skladnik3</value><value>skladnik2</value><value>skladnik1</value></Ingredients><Preparing>krok krok krok</Preparing><Type/><Amount>4</Amount></Dish></Dishes>
+<Dish><Category>Przekąska</Category><Subcategory>Wegetariańskie</Subcategory><Name>Zapiekanka</Name><Ingredients type="array"><value>ser</value><value>szczypiorek</value><value>pieczarki</value><value>majonez</value></Ingredients><Preparing>składniki i zapiekać</Preparing><Destiny>Drugie Śniadanie</Destiny><Portions>Portions</Portions></Dish></Dishes>
