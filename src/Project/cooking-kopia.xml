@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Dishes>
+    <Dish>
+        <Category>Drugie Danie</Category>
+        <Subcategory>Mięsne</Subcategory>
+        <Name>Kotlet Schabowy</Name>
+        <Ingriedients type="array">
+            <value>400g schabu wieprzowego</value>
+            <value>Jajko</value>
+            <value>Bułka Tarta</value>
+            <value>Przyprawa do mięsa wieprzowego</value>
+        </Ingriedients>
+        <cost>20</cost>
+        <Preparing>Ubij mięso. Posyp przyprawą. Obtocz je najpierw w jajku, następnie w bułce tartej.
+        Następnie smaż według uznania, tak żeby mięso w środku było usmażone</Preparing>
+        <Amount>4</Amount>
+        <Destiny>Obiad</Destiny>
+    </Dish>
+    <Dish>
+        <Category>Napój</Category>
+        <Subcategory>Fit</Subcategory>
+        <Name>Koktajl Owocowy</Name>
+        <Ingriedients type="array">
+            <value>Jogurt Naturalny</value>
+            <value>Mleko</value>
+            <value>Owoce</value>
+            <value>Opcjonalnie: kakao</value>
+        </Ingriedients>
+        <cost>10</cost>
+        <Preparing>Wrzuć wszystkie składniki do blendera, następnie zmiksuj. Podawaj na zimno</Preparing>
+        <Type>Koktajl</Type>
+        <Amount>1</Amount>
+    </Dish>
+    <Dish>
+        <Category>Drugie Danie</Category>
+        <Subcategory>Mięsne</Subcategory>
+        <Name>Nazwa</Name>
+        <Ingriedients type="array">
+            <value>składnik 1</value>
+            <value>skłądnik 2</value>
+            <value>składnik 3</value>
+        </Ingriedients>
+        <cost>15</cost>
+        <Preparing>coś tam coś tam. robimy robimy robimy. pieczeym piecxzey</Preparing>
+        <Amount>4</Amount>
+        <Destiny>Na randkę</Destiny>
+    </Dish>
+</Dishes>
