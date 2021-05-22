@@ -116,7 +116,7 @@ public class fileWriter {
         Element destiny = document.createElement("Destiny");
         Element por = document.createElement("Portions");
         destiny.appendChild(document.createTextNode(snack.getDestiny()));
-        por.appendChild(document.createTextNode("Portions"));
+        por.appendChild(document.createTextNode(Integer.toString(snack.getAmount())));
         newSnack.appendChild(destiny);
         newSnack.appendChild(por);
         root.appendChild(newSnack);
