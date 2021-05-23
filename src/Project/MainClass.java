@@ -15,10 +15,10 @@ public class MainClass {
         ArrayList<Salad> saladList = reader.getListOfSalads();
         HashMap<String, ArrayList<Dish>> subCategories = reader.getSubCategorySearch();
         HashSet<String> names = reader.getNames();
-        NewRecipe getter = new NewRecipe(names);
-        Searcher searcher = new Searcher(firstList, secondList, drinkList, snackList, saladList, subCategories);
         Runnable runner = new listThread(firstList, secondList, drinkList, snackList, saladList);
         Thread thread = new Thread(runner);
+        NewRecipe getter = new NewRecipe(names, thread);
+        Searcher searcher = new Searcher(firstList, secondList, drinkList, snackList, saladList, subCategories);
         userHandler handler = new userHandler(firstList, secondList, drinkList, snackList, saladList,
                 subCategories, getter, searcher, thread);
         handler.mainMenu();

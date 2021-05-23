@@ -17,9 +17,11 @@ public class NewRecipe {
             "Fit", "Deser", "Jednogarnkowe", "Okazjonalne"));
     private static HashSet<String> names;
 
+    private static Thread thread;
 
-    public NewRecipe(HashSet<String> names) {
+    public NewRecipe(HashSet<String> names, Thread thread) {
         NewRecipe.names = names;
+        NewRecipe.thread = thread;
     }
 
     public static boolean cat_validator(String category){ return categories.contains(category); }
@@ -28,38 +30,49 @@ public class NewRecipe {
 
     public static FirstDish firstDishGetter(){
         System.out.println("Podaj ile litrów zupy powstanie");
+        thread.suspend();
         int amount = Integer.parseInt(scan.nextLine());
+        thread.resume();
         return new FirstDish(name, ingredients, category, subcategory, cost, preparing, amount);
     }
 
     public static SecondDish secondDishGetter(){
         System.out.println("Podaj liczbę porcji");
+        thread.suspend();
         int portions = Integer.parseInt(scan.nextLine());
         System.out.println("Podaj przeznaczenie potrawy");
         String destiny = scan.nextLine();
+        thread.resume();
         return new SecondDish(name, ingredients, category, subcategory, cost, preparing, portions, destiny);
     }
 
     public static Drink drinkGetter(){
         System.out.println("Podaj jaki to napój");
+        thread.suspend();
         String type = scan.nextLine();
         System.out.println("Podaj liczbę litrów");
         int am = Integer.parseInt(scan.nextLine());
+        thread.resume();
         return new Drink(name, ingredients, category, subcategory, cost, preparing, am, type);
     }
 
     public static Snack snackGetter(){
         System.out.println("Podaj przeznaczenie przystawki");
+        thread.suspend();
         String dest = scan.nextLine();
         System.out.println("Podaj ilość poracji");
         int am = Integer.parseInt(scan.nextLine());
+        thread.resume();
         return new Snack(name, ingredients, category, subcategory, cost, preparing, dest, am);
     }
 
     public static Salad saladGetter(){
         System.out.println("Podaj rodzaj sałatki");
+        thread.suspend();
         String type = scan.nextLine();
+        System.out.println("Podaj przeznaczenie sałatki");
         String dest = scan.nextLine();
+        thread.resume();
         return new Salad(name, ingredients, category, subcategory, cost, preparing, type, dest);
     }
 
@@ -67,6 +80,7 @@ public class NewRecipe {
                       ArrayList<Salad> salads, ArrayList<Snack> snacks,
                       HashMap<String, ArrayList<Dish>> dict){
         System.out.println("Podaj kategorię przepisu");
+        thread.suspend();
         category = scan.nextLine();
         while (!cat_validator(category)){
             System.out.println("Kategoria musi należeć do: " + categories);
@@ -105,7 +119,7 @@ public class NewRecipe {
         preparing = scan.nextLine();
         System.out.println("Podaj koszt");
         cost = Integer.parseInt(scan.nextLine());
-
+        thread.resume();
         switch (category){
             case "Pierwsze Danie":
                 fDish.add(firstDishGetter());
