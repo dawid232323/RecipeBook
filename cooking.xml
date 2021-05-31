@@ -74,4 +74,4 @@
     <Destiny>Drugie Śniadanie</Destiny>
     <Portions>4</Portions>
 </Dish>
-</Dishes>
+<Dish><Category>Pierwsze Danie</Category><Subcategory>Jednogarnkowe</Subcategory><Name>Zupa Pomidorowa</Name><Ingriedients type="array"><value>przyprawy (według uznania)</value><value>bulion warzywny</value><value>koncentrat pomidorowy</value><value>śmietana</value></Ingriedients><cost>15</cost><Preparing>Do bulionu dodać koncentrat pomidorowy. Śmietanę rozcieńczyć z wodą i dodać do niej troszkę gorącej zupy, po to, żeby śmietana nie zważyła się. Następnie dolewać to delikatnie do zupy mieszając. Doprawić według uznania</Preparing><Amount>5</Amount></Dish><Dish><Category>Przekąska</Category><Subcategory>Mięsne</Subcategory><Name>przepis</Name><Ingredients type="array"><value/><value>skladnik2</value><value>skladnik1</value></Ingredients><Preparing>krok krok krok </Preparing><Destiny>sdas</Destiny><Portions>1</Portions></Dish></Dishes>

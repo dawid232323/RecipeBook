@@ -32,7 +32,7 @@ public class fileWriter {
 
         try {
             fileWriter.documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            fileWriter.document = documentBuilder.parse("/Users/dawidpylak/Documents/Studia/Programowanie Obiektowe/PO Project/src/Project/cooking.xml");
+            fileWriter.document = documentBuilder.parse("cooking.xml");
             fileWriter.root = document.getDocumentElement();
         }
         catch (Exception e){
@@ -159,7 +159,7 @@ public class fileWriter {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         try {
             Transformer transformer = transformerFactory.newTransformer();
-            StreamResult result = new StreamResult("/Users/dawidpylak/Documents/Studia/Programowanie Obiektowe/PO Project/src/Project/cooking.xml");
+            StreamResult result = new StreamResult("cooking.xml");
             transformer.transform(source, result);
         }
         catch (Exception e){
