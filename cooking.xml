@@ -62,13 +62,14 @@
     <Category>Przekąska</Category>
     <Subcategory>Fit</Subcategory>
     <Name>Zapiekanka</Name>
-    <Ingredients type="array">
+    <Ingriedients type="array">
         <value>Boczek</value>
         <value>Ser</value>
         <value>Bagietka</value>
         <value>Szczypiorek</value>
         <value>Sos Pomidorowy</value>
-    </Ingredients>
+    </Ingriedients>
+    <cost>12</cost>
     <Preparing>Bagietke przekroić i posmarować sosem, nałożyć boczek, ser i szczypiorek. Podpiec w piekarniku w 240 stopniach przez około 5/10 minut.</Preparing>
     <Destiny>Drugie Śniadanie</Destiny>
     <Portions>4</Portions>

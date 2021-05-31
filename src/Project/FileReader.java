@@ -44,7 +44,7 @@ public class FileReader {
         Document doc;
         NodeList nodes = null;
         boolean val = true;
-        String path = "/Users/dawidpylak/Documents/Studia/Programowanie Obiektowe/PO Project/src/Project/cooking.xml";
+        String path = "cooking.xml";
         while (val){
         try {
             file = new File(path);
